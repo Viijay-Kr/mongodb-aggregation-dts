@@ -1,0 +1,29 @@
+{
+  "name": "mongodb-aggregation-dts",
+  "description": "Type definitions for MongoDB aggregation pipelines and operators",
+  "author": {
+    "email": "vijayakrishna.venkatesan@gmail.com",
+    "name": "Vijayakrishna Venkatesan",
+    "url": "https://www.vijayakrishna.dev"
+  },
+  "repository": {
+    "url": "https://github.com/Viijay-Kr/mongodb-aggregation-dts"
+  },
+  "license": "MIT",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0",
+    "mongodb": "^6.8.0"
+  },
+  "files": [
+    "types"
+  ],
+  "scripts": {
+    "compile": "tsc"
+  },
+  "type": "module",
+  "types": "types/mongodb.d.ts"
+}
