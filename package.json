@@ -7,6 +7,28 @@
     "name": "Vijayakrishna Venkatesan",
     "url": "https://www.vijayakrishna.dev"
   },
+  "keywords": [
+    "mongodb",
+    "types",
+    "typescript",
+    "type-definitions",
+    "aggregation",
+    "pipeline",
+    "aggregation-pipeline",
+    "operators",
+    "mongodb-aggregation",
+    "mongodb-operators",
+    "mongoose",
+    "mongodb-types",
+    "typescript-definitions",
+    "mongodb-aggregation-typings",
+    "mongodb-query",
+    "nosql",
+    "schema",
+    "type-safety",
+    "typescript-helpers",
+    "database"
+  ],
   "repository": {
     "url": "https://github.com/Viijay-Kr/mongodb-aggregation-dts"
   },
