@@ -11,28 +11,28 @@ jobs:
     name: Create Release PR or Publish
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout Repo
-          uses:actions/checkout@v4
-      
-        - name: Install bun  
-          uses:oven-sh/setup-bun@v2
-      
-        - name: Install Dependencies
-          run: bun install
-        - name: Create Release Pull Request or Publish to npm
-          id: changesets
-          uses: changesets/action@v1
-          with:
-            # This expects you to have a script called release which does a build for your packages and calls changeset publish
-            publish: bun run release
-            env:
-            GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-        - name: Tag Version
-          id: tag_version
-          if: steps.publish.outcome == 'success'
-          uses: Klemensas/action-autotag@1.2.3
-          with:
-            GITHUB_TOKEN: "${{ secrets.MY_GITHUB_TOKEN }}"
-            tag_prefix: "v"
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install Dependencies
+        run: bun install
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: bun run release
+          env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Tag Version
+        id: tag_version
+        if: steps.publish.outcome == 'success'
+        uses: Klemensas/action-autotag@1.2.3
+        with:
+          GITHUB_TOKEN: "${{ secrets.MY_GITHUB_TOKEN }}"
+          tag_prefix: "v"
