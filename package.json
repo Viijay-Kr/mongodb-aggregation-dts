@@ -1,7 +1,7 @@
 {
   "name": "mongodb-aggregation-dts",
   "description": "Type definitions for MongoDB aggregation pipelines and operators",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "email": "vijayakrishna.venkatesan@gmail.com",
     "name": "Vijayakrishna Venkatesan",
