@@ -1,5 +1,11 @@
 # mongodb-aggregation-dts
 
+## 0.1.2
+
+### Patch Changes
+
+- 54e060b: fix dependency
+
 ## 0.1.1
 
 ### Patch Changes
